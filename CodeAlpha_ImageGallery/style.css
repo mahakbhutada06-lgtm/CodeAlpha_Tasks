@@ -1,0 +1,88 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px;
+}
+
+/* Filter Buttons */
+.filter-buttons button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover {
+  background: #555;
+}
+
+/* Gallery Layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effects */
+.gallery img:hover {
+  transform: scale(1.05);
+  filter: brightness(80%);
+}
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+#lightbox img {
+  max-width: 80%;
+  margin-top: 5%;
+}
+
+/* Buttons */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Responsive */
+@media(max-width: 600px) {
+  #lightbox img {
+    width: 95%;
+  }
+}
