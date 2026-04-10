@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+}
+
+.player {
+  width: 320px;
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.controls button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #555;
+  transform: scale(1.1);
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+ul li {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #333;
+}
+
+ul li:hover {
+  background: #222;
+}
